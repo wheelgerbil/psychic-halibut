@@ -23,8 +23,11 @@ void setup() {
 
 void loop(){
 
-  if (digitalRead(Switch1 || Switch2 || Switch3) == HIGH){
+    if (digitalRead(Switch1) == HIGH //If any switches are on green LED is on, if all switches are off red LED is on.
+  || digitalRead(Switch2) ==HIGH 
+  || digitalRead(Switch3) == HIGH){
   digitalWrite(LEDgreen, HIGH);
+  digitalWrite(LEDred, LOW);
 
 }
 else{
